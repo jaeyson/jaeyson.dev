@@ -1,0 +1,157 @@
+:root {
+  --text-grey: #545454;
+  --text-lightgrey: #c8c8c8;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Fira Code", monospace;
+  -webkit-font-display: fallback;
+  font-display: fallback;
+  box-sizing: border-box;
+  font-size: calc(16px + .1vmax);
+  font-variant-ligatures: normal;
+}
+
+body,
+nav a:focus,
+nav a:active,
+nav a:hover,
+.nav--selected,
+.nav--brand {
+  color: var(--text-grey);
+}
+
+nav,
+footer,
+section {
+  border: 1px solid grey;
+}
+
+.container {
+  width: 75vw;
+  margin: 0 auto;
+}
+
+nav {
+  top: 0;
+}
+
+footer {
+  bottom: 0;
+  padding: 1rem;
+}
+
+nav,
+footer {
+  position: fixed;
+  background: white;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li:first-child {
+  flex: 1;
+  margin-left: 0;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 1vmax 3vmax;
+  /*margin: 1rem 3rem;*/
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  transition: .2s;
+  color: var(--text-lightgrey);
+  padding: .5rem;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+  background: yellow;
+}
+
+section {
+  margin: 8vmax 0;
+  display: flex;
+}
+
+figure {
+  margin-right: 2rem;
+  flex: 1;
+}
+
+figcaption {
+  width: 60%;
+  padding: 1.5rem 0;
+}
+
+figcaption a {
+  color: var(--text-grey);
+}
+
+figcaption h3 {
+  margin: 2.5vmax 0;
+  line-height: 3rem;
+}
+
+figcaption p,
+figcaption ul {
+  margin: 2rem 0;
+}
+
+figcaption ul li {
+  list-style: none;
+  margin: .5rem 0;
+}
+
+.link {
+  background: yellow;
+  padding: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: .2s;
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: calc(16px + .5vmax);
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+  background: var(--text-grey);
+  color: white;
+}
+
+mark {
+  border-radius: 5px;
+  padding: .5rem;
+  background: var(--text-grey);
+  color: white;
+}
+
+noscript p {
+  background: yellow;
+  color: grey;
+}
