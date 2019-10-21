@@ -9,12 +9,22 @@ import Test exposing (..)
 suite : Test
 suite =
     -- todo "Implement our first test. See https://package.elm-lang.org/packages/elm-explorations/test/latest for how to do this!"
-    describe "scorekeeper app improved"
-        [ test "blank names won't be added in the roster" <|
+    describe "initialize app"
+        [ test "blank names won't be added upon starting the app" <|
             \_ ->
                 let
                     blankName =
                         ""
                 in
-                Expect.equal blankName Model.name
+                Expect.equal blankName init.name
+
+        {--
+        , fuzz string "takes any input as a name" <|
+            \randomString ->
+                let
+                    newName =
+                        { init | name = randomString }
+                in
+                Expect.equal randomString init.name
+        --}
         ]
