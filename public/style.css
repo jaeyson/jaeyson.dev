@@ -25,6 +25,10 @@ body {
   font-variant-ligatures: normal;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 body,
 nav a:focus,
 nav a:active,
@@ -51,7 +55,8 @@ nav {
 
 footer {
   bottom: 0;
-  padding: 1rem;
+  padding: .25rem;
+  text-align: center;
 }
 
 nav,

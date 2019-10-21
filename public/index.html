@@ -6,37 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="pure.css">
   <link rel="stylesheet" href="app.css">
   <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
   <script src="elm.min.js"></script>
-
-  <!--
-    [-] Can't view without JavaScript? No Problem
-    [-] Can't view using Html only? No Problem
-    [-] Can't view using legacy browsers? No Problem
-    [-] Accessibility issues ? No Problem
-    [-] Saving bandwidth? No Problem
-  -->
-
-</head>
-<body>
-  <div class="container">
-    <div id="elm"></div>
-    <a class="github-source" href="https://github.com/jaeyson/score-keeper-improved" target="_blank" rel="noreferrer">Github Source</a>
-  </div>
-
-  <script>
-    //Elm.Practice == module Practice exposing (..)
-    //Make sure to change that every time you
-    //switch modules.
-    const app = Elm.Main.init({
-      node: document.getElementById('elm')
-    });
-  </script>
-
   <noscript>
+    <link rel="stylesheet" href="style.css">
     <nav class="container">
       <ul>
         <li><a href="#" class="nav--brand">Jaeyson - Web Developer</a></li>
@@ -101,10 +76,33 @@
     </main>
 
     <footer class="container">
-      <h3>This site runs fine without JavaScript &middot; Built in Elm &middot; Read it <a href="#">here</a> on how I did it.
-      </h3>
+      Built in Elm &middot; Read it <a href="#">here</a> on how I did it.
     </footer>
   </noscript>
+  <!--
+    [-] Can't view without JavaScript? No Problem
+    [-] Can't view using Html only? No Problem
+    [-] Can't view using legacy browsers? No Problem
+    [-] Accessibility issues ? No Problem
+    [-] Saving bandwidth? No Problem
+  -->
+
+</head>
+<body>
+  <div class="container">
+    <div id="elm"></div>
+    <a class="github-source" href="https://github.com/jaeyson/score-keeper-improved" target="_blank" rel="noreferrer">Github Source</a>
+  </div>
+
+  <script>
+    //Elm.Practice == module Practice exposing (..)
+    //Make sure to change that every time you
+    //switch modules.
+    const app = Elm.Main.init({
+      node: document.getElementById('elm')
+    });
+  </script>
+
 </body>
 </html>
 
