@@ -1,108 +1,75 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <title>Jaeyson &middot; Web Developer</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRLFB9Q6EP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  <link rel="stylesheet" href="pure.css">
-  <link rel="stylesheet" href="app.css">
-  <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
-  <script src="elm.min.js"></script>
-  <noscript>
-    <link rel="stylesheet" href="style.css">
-    <nav class="container">
-      <ul>
-        <li><a href="#" class="nav--brand">Jaeyson - Web Developer</a></li>
-        <li><a href="#" class="nav--selected">Projects</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+    gtag('config', 'G-NRLFB9Q6EP');
+  </script>
+  <!-- End Global site tag (gtag.js) - Google Analytics -->
 
-    <main class="container">
-      <!-- NBA Scorekeeping App -->
-      <section>
-        <figure>
-          <img src="#" alt="placeholder image">
-        </figure>
-
-        <figcaption>
-          <h1>NBA Scorekeeping App</h1>
-          <p>A simple app which records your team/player's score with dashboard progress. You can read it <strong><a href="#">here</a></strong> on how I made this.</p>
-          <ul>
-             <li><strong>First paint</strong>: 0.5 seconds</li>
-             <li><strong>Load time</strong>: 1 second</li>
-             <li><strong>Size</strong>: 623KB (gzipped)</li>
-           </ul>
-
-          <h3>
-            Tools used:
-            <mark>Elm</mark>
-            <mark>HTML</mark>
-            <mark>CSS/SCSS</mark>
-            <mark>Firebase</mark>
-          </h3>
-
-          <a href="#" class="link">Demo</a>
-          <a href="#" class="link">Source</a>
-        </figcaption>
-      </section> <!-- NBA Scorekeeping App -->
-
-      <!-- Diary/Todo with dashboard -->
-      <section>
-        <figure>
-          <img src="#" alt="placeholder image">
-        </figure>
-
-        <figcaption>
-          <h1>Diary/Todo with dashboard</h1>
-          <p>A diary and todo list that you can see your progress, like you see on Github chloropeth heatmap chart. You can read it <strong><a href="#">here</a></strong> on how I made this.</p>
-
-          <h3>
-            Tools used:
-            <mark>Elm</mark>
-            <mark>HTML</mark>
-            <mark>CSS/SCSS</mark>
-            <mark>Firebase</mark>
-            <mark>IndexDB</mark>
-          </h3>
-
-          <a href="#" class="link">Demo</a>
-          <a href="#" class="link">Source</a>
-        </figcaption>
-      </section> <!-- Diary/Todo with dashboard -->
-    </main>
-
-    <footer class="container">
-      Built in Elm &middot; Read it <a href="#">here</a> on how I did it.
-    </footer>
-  </noscript>
-  <!--
-    [-] Can't view without JavaScript? No Problem
-    [-] Can't view using Html only? No Problem
-    [-] Can't view using legacy browsers? No Problem
-    [-] Accessibility issues ? No Problem
-    [-] Saving bandwidth? No Problem
-  -->
-
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Hi! I'm a Frontend developer, also learning Elixir during my spare time. Passionate on learning the right tools for the right job.">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=fallback">
+  <title>Jaeyson Anthony Y. &rtri; Software Developer</title>
 </head>
+
 <body>
-  <div class="container">
-    <div id="elm"></div>
-    <a class="github-source" href="https://github.com/jaeyson/score-keeper-improved" target="_blank" rel="noreferrer">Github Source</a>
+  <div class="description">
+    <h1>
+      Jaeyson Anthony Y.
+    </h1>
+    <div class="change-text">
+      <div class="skills">
+        <p>Aspiring</p>
+        <p>Frontend</p>
+        <p>Backend</p>
+        <p>Elixir</p>
+        <p>Elm</p>
+      </div>
+      <span>Developer</span>
+      <!--
+      <span>Aspiring&nbsp;</span>
+      <span>Frontend Dev</span>
+      -->
+    </div>
+    <div id="changer"></div>
+    <div class="links">
+      <a href="https://github.com/jaeyson" target="_blank" rel="noopener noreferrer">
+        Github
+      </a>
+      <span>&middot;</span>
+      <a href="https://linkedin.com/in/jaeyson" target="_blank" rel="noopener noreferrer">
+        LinkedIn
+      </a>
+      <span>&middot;</span>
+      <a href="https://exercism.io/profiles/jaeyson" target="_blank" rel="noopener noreferrer">
+        Exercism
+      </a>
+      <span>&middot;</span>
+      <a href="https://codepen.io/jaeyson" target="_blank" rel="noopener noreferrer">
+        Codepen
+      </a>
+      <!-- <span>&middot;</span>
+      <a href="/blog" target="_blank" rel="noopener noreferrer">
+        Blog
+      </a> -->
+    </div>
   </div>
 
   <script>
-    //Elm.Practice == module Practice exposing (..)
-    //Make sure to change that every time you
-    //switch modules.
-    const app = Elm.Main.init({
-      node: document.getElementById('elm')
-    });
+    if (location.host === 'devjaeyson.firebaseapp.com'
+        || location.host === 'devjaeyson.web.app') {
+      location.href = 'https://jaeyson.dev';
+    }
   </script>
-
 </body>
 </html>
 

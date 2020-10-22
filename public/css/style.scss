@@ -1,0 +1,234 @@
+$font: 'Poppins', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font;
+  background: #EBEDEE;
+  background: -webkit-linear-gradient(to right, #FDFBFB, #EBEDEE 70%);
+  background: linear-gradient(to right, #FDFBFB, #EBEDEE 70%);
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 2rem;
+  text-transform: uppercase;
+
+  .change-text {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    font-weight: bolder;
+    color: #00076b;
+
+    .skills {
+      height: 3rem;
+      list-style: none;
+      text-align: right;
+      margin-right: 1rem;
+      animation: change 10s infinite;
+    }
+  }
+
+  h1 {
+    // gradient text
+    text-transform: uppercase;
+    background: linear-gradient(to right, #8e44ad 0%, #c0392b 35%, #00076b);
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    backface-visibility: hidden;
+    // End -gradient text
+
+    // animation: flow 30s ease-in-out infinite;
+
+    font-size: calc(1rem + 7vw);
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+// animated gradient text (high cpu usage when you use this)
+// @keyframes flow {
+//   0% {
+//     background-position: 0 50%;
+//   }
+
+//   50% {
+//     background-position: 100% 50%;
+//   }
+
+//   100% {
+//     // background-position: 0% 50%;
+//   }
+// }
+// end of animated gradient text
+
+// line movement hover
+.links a {
+  text-decoration: none;
+  transition: color .2s ease;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 1rem;
+  color: #00076b;
+
+  &:visited {
+    color: #00076b;
+  }
+
+  &:hover {
+    color: #0011ff;
+
+    &::after,
+    &::before {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 0;
+    right: 0;
+    height: .3rem;
+  }
+
+  &::before {
+    transition: width .2s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
+    background: #8e44ad;
+  }
+
+  &::after {
+    transition: width .1s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+    background: #c0392b;
+  }
+}
+
+// End - line movement hover
+
+@media screen and (min-width: 60.98rem) {
+  .change-text {
+    font-size: 4rem;
+  }
+
+  // keyframe animation
+  @keyframes change {
+    0% {
+      transform: translateY(0);
+    }
+
+    18% {
+      transform: translateY(0);
+    }
+
+    20% {
+      transform: translateY(-6rem);
+    }
+
+    38% {
+      transform: translateY(-6rem);
+    }
+
+    40% {
+      transform: translateY(-12rem);
+    }
+
+    58% {
+      transform: translateY(-12rem);
+    }
+
+    60% {
+      transform: translateY(-18rem);
+    }
+
+    78% {
+      transform: translateY(-18rem);
+    }
+
+    80% {
+      transform: translateY(-24rem);
+    }
+
+    98% {
+      transform: translateY(-24rem);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  // end keyframe animation
+
+}
+
+@media screen and (max-width: 60rem) {
+  .links a {
+    display: block;
+    text-align: center;
+  }
+
+  .links span {
+    display: none;
+  }
+
+  // keyframe animation
+  @keyframes change {
+    0% {
+      transform: translateY(0);
+    }
+
+    23% {
+      transform: translateY(0);
+    }
+
+    25% {
+      transform: translateY(-3rem);
+    }
+
+    48% {
+      transform: translateY(-3rem);
+    }
+
+    50% {
+      transform: translateY(-6rem);
+    }
+
+    73% {
+      transform: translateY(-6rem);
+    }
+
+    75% {
+      transform: translateY(-9rem);
+    }
+
+    98% {
+      transform: translateY(-9rem);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  // end keyframe animation
+}
